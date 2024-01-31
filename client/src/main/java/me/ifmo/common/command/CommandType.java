@@ -8,7 +8,6 @@ public enum CommandType {
     VALID,
     NOT_VALID,
     TRANSMITTING,
-    NOT_TRANSMITTING,
     SCRIPT;
 
     /**

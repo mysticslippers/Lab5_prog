@@ -76,12 +76,11 @@ public class FileManager {
                             System.out.println("Object's ID now is " + (idCounter));
                             collection.add(new Dragon(idCounter, infoDragon.get(1), new Coordinates(Long.parseLong(infoDragon.get(2)), Float.parseFloat(infoDragon.get(3))),
                                     LocalDate.now(), Long.parseLong(infoDragon.get(5)), color, dragonType, dragonCharacter, new DragonCave(Long.parseLong(infoDragon.get(9)))));
-                            infoDragon.clear();
                         } else{
                             System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
                             System.out.println(infoDragon);
-                            infoDragon.clear();
                         }
+                        infoDragon.clear();
                     }catch(IllegalArgumentException exception){
                         System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
                         infoDragon.clear();
@@ -254,12 +253,11 @@ public class FileManager {
                                 System.out.println("Object's ID now is " + (idCounter));
                                 collection.add(new Dragon(idCounter, infoDragon.get(1), new Coordinates(Long.parseLong(infoDragon.get(2)), Float.parseFloat(infoDragon.get(3))),
                                         LocalDate.now(), Long.parseLong(infoDragon.get(5)), color, type, character, new DragonCave(Long.parseLong(infoDragon.get(9)))));
-                                infoDragon.clear();
                             } else {
                                 System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
                                 System.out.println(infoDragon);
-                                infoDragon.clear();
                             }
+                            infoDragon.clear();
                         }catch(IllegalArgumentException exception){
                             System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
                             infoDragon.clear();
@@ -334,12 +332,11 @@ public class FileManager {
                                     .setColor(color).setType(type).setCharacter(character).setCave(new DragonCave(Long.parseLong(dragonInfo.get(9)))).build());
                             System.out.println("Object with ID: " + dragonInfo.get(0) + " added to the collection!");
                             System.out.println("Object's ID now is " + (idCounter));
-                            dragonInfo.clear();
                         } else{
                             System.out.println("Object data ID: " + dragonInfo.get(0) + " is not valid!");
                             System.out.println(dragonInfo);
-                            dragonInfo.clear();
                         }
+                        dragonInfo.clear();
                     }catch(IllegalArgumentException exception){
                         System.out.println("Object data ID: " + dragonInfo.get(0) + " is not valid!");
                         dragonInfo.clear();
@@ -460,11 +457,66 @@ public class FileManager {
         return output.toString();
     }
 
+    /**
+     * A method that implements writing collection objects by Pattern to JSON file.
+     * @param filePath - The path to the file.
+     * @return Returns a collection of objects from a file.
+     */
+
     public static LinkedHashSet<Dragon> readFileJSONByPattern(String filePath){
         LinkedHashSet<Dragon> collection = new LinkedHashSet<>();
         ArrayList<String> infoDragon = new ArrayList<>();
-        Pattern pattern = Pattern.compile("\".*\": \"?([-0-9a-zA-Zа-яА-Я]*)\"?[^{]");
+        Pattern pattern = Pattern.compile("\".*\": \"?([-0-9a-zA-Z]*)[^{\\[]\"?\\b");
         String line;
+
+        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+            try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
+                Color color;
+                DragonType type;
+                DragonCharacter character;
+                while((line = bufferedReader.readLine()) != null){
+                    Matcher matcher = pattern.matcher(line);
+                    int idCounter = Math.abs(line.hashCode());
+                    if(matcher.find()){
+                        String attribute = matcher.group().trim();
+                        infoDragon.add(attribute.substring(attribute.lastIndexOf(":") + 2).replace("\"", ""));
+                    }
+                    if(line.contains("numberOfTreasures")){
+                        try {
+                            if(UserInputManager.isDragonDataValid(infoDragon)){
+                                color = Color.valueOf(infoDragon.get(6));
+                                type = (!infoDragon.get(7).isEmpty() && !infoDragon.get(7).equals("null")) ? DragonType.valueOf(infoDragon.get(7)) : null;
+                                character = DragonCharacter.valueOf(infoDragon.get(8));
+                                System.out.println("Object with ID: " + infoDragon.get(0) + " added to the collection!");
+                                System.out.println("Object's ID now is " + (idCounter));
+                                collection.add(new Dragon(idCounter, infoDragon.get(1), new Coordinates(Long.parseLong(infoDragon.get(2)), Float.parseFloat(infoDragon.get(3))),
+                                        LocalDate.now(), Long.parseLong(infoDragon.get(5)), color, type, character, new DragonCave(Long.parseLong(infoDragon.get(9)))));
+                            } else {
+                                System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
+                                System.out.println(infoDragon);
+                            }
+                            infoDragon.clear();
+                        } catch (IllegalArgumentException exception){
+                            System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
+                            infoDragon.clear();
+                        }
+                    }
+                }
+            }catch (IOException exception){
+                System.out.println("----------------------");
+                System.out.println("The file can't be read!");
+            } catch(NoSuchElementException exception){
+                System.out.println("----------------------");
+                System.out.println("The file is empty!");
+            }
+        }
         return collection;
     }
+
+    public static LinkedHashSet<Dragon> readFileJSONByLibrary(String filePath){
+        LinkedHashSet<Dragon> collection = new LinkedHashSet<>();
+        return collection;
+    }
+
+    public static void writeFileJSONByLibrary(LinkedHashSet<Dragon> collection, String filePath){}
 }
