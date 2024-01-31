@@ -1,0 +1,37 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+    repositories {
+        mavenCentral()
+    }
+}
+
+project(':client'){
+    apply plugin: 'application'
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+    javadoc.options.encoding = 'UTF-8'
+    mainClassName = 'me.ifmo.client.ClientApp'
+    dependencies{
+        implementation 'org.apache.commons:commons-csv:1.10.0'
+        implementation 'xml-apis:xml-apis:1.4.01'
+        implementation 'com.google.code.gson:gson:2.8.6'
+    }
+    jar {
+        manifest {
+            attributes(
+                    'Main-Class': 'me.ifmo.client.ClientApp'
+            )
+        }
+        from {
+            configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+        }
+    }
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}
