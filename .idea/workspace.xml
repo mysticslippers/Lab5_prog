@@ -4,35 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82e78b9e-e207-4620-adb8-a536d573f2dc" name="Changes" comment="жсончик + остальная лаба">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/AddCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/AverageOfAgeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/BaseCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/HistoryCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/PrintFieldDescendingCaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/RemoveByCharacterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/ReorderCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/SaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/commands/UpdateByIdCommand.java" afterDir="false" />
+    <list default="true" id="82e78b9e-e207-4620-adb8-a536d573f2dc" name="Changes" comment="done">
+      <change afterPath="$PROJECT_DIR$/TODO_List.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollectionCSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CollectionCSV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollectionXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CollectionXML.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientLaunchManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientLaunchManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/command/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/command/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/command/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/command/CommandType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Coordinates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Dragon$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Dragon$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Dragon.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/Dragon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonCave.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonCave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonType.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/DragonType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/TableDataHeaders.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/data/TableDataHeaders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/CollectionNotRecognizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/CollectionNotRecognizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/ExecutingScriptException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/ExecutingScriptException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/FieldEmptyException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/FieldEmptyException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/LocalDateParseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/LocalDateParseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/NoSuchCommandException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/NoSuchCommandException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/NumberOutOfRangeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/NumberOutOfRangeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/StringContainCsvDelimiterException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/StringContainCsvDelimiterException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/StringLengthOutOfRangeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/StringLengthOutOfRangeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/WrongArgumentException.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/exceptions/WrongArgumentException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/AddIFMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/AddIFMax.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/AverageOfAge.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/AverageOfAge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/RemoveAllByCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/interfaces/RemoveAllByCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/DragonMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/DragonMaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/UserInputManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/UserInputManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CollectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CollectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CommandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/ComparatorAscendingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/ComparatorAscendingOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/ComparatorDescendingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/ComparatorDescendingOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/FileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AddCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AddCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AddIfMaxCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AddIfMaxCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AverageOfAgeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/AverageOfAgeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/BaseCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/BaseCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ClearCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ClearCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ExecuteScriptCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ExecuteScriptCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ExitCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ExitCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/HelpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/HelpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/HistoryCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/HistoryCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/InfoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/InfoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/PrintFieldDescendingCaveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/PrintFieldDescendingCaveCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/RemoveByCharacterCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/RemoveByCharacterCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/RemoveByIdCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/RemoveByIdCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ReorderCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ReorderCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/SaveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/SaveCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ShowCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/ShowCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/UpdateByIdCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/commands/UpdateByIdCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/utils/UserInputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/utils/UserInputManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CollectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/FileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +99,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2bdIQzr6a94KmcwLpeQIKJkTKJ4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -68,15 +110,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Lab5_prog:client [:client:ClientApp.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/zavoe/IdeaProjects/TestParser",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ARKoli/IdeaProjects/Lab5_prog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,6 +137,13 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -102,7 +155,10 @@
       <workItem from="1706538521613" duration="1932000" />
       <workItem from="1706543334321" duration="3652000" />
       <workItem from="1706697704998" duration="6833000" />
-      <workItem from="1706720227590" duration="13156000" />
+      <workItem from="1706720227590" duration="13235000" />
+      <workItem from="1706766950149" duration="2503000" />
+      <workItem from="1706779623594" duration="798000" />
+      <workItem from="1710758603864" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="жсончик + остальная лаба">
       <created>1706705249164</created>
@@ -111,7 +167,28 @@
       <option name="project" value="LOCAL" />
       <updated>1706705249164</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="жсончик + execute_script">
+      <created>1706736433248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706736433248</updated>
+    </task>
+    <task id="LOCAL-00003" summary="жсончик + execute_script">
+      <created>1706736441328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706736441328</updated>
+    </task>
+    <task id="LOCAL-00004" summary="жсончик + execute_script">
+      <created>1706736451410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706736451410</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +196,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="жсончик + остальная лаба" />
-    <option name="LAST_COMMIT_MESSAGE" value="жсончик + остальная лаба" />
+    <MESSAGE value="жсончик + execute_script" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

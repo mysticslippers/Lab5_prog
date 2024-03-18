@@ -139,7 +139,7 @@ public class FileManager {
                     if(UserInputManager.isDragonDataValid(dragonInfo)){
 
                         color = Color.valueOf(object[6]);
-                        if(!object[7].isEmpty() && !object[7].equals("null")) type = DragonType.valueOf(object[7]);
+                        if(object[7] != null && !object[7].isEmpty() && !object[7].equals("null")) type = DragonType.valueOf(object[7]);
                         character = DragonCharacter.valueOf(object[8]);
                         System.out.println("Object with ID: " + object[0] + " added to the collection!");
                         System.out.println("Object's ID now is " + (idCounter));
@@ -184,7 +184,7 @@ public class FileManager {
             try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))) {
 
                 for (TableDataHeaders header : TableDataHeaders.values()) {
-                    if (header.name().contains("cave")) bufferedWriter.write(header.name());
+                    if (header.name().contains("numberOfTreasures")) bufferedWriter.write(header.name());
                     else bufferedWriter.write(header.name() + ", ");
                 }
                 bufferedWriter.newLine();
@@ -201,7 +201,7 @@ public class FileManager {
                     }
 
                     for (int i = 0; i < info.size(); i++) {
-                        if (i == 12) {
+                        if (i == 9) {
                             record.append(info.get(i));
                         } else {
                             record.append(info.get(i)).append(", ");
@@ -235,10 +235,11 @@ public class FileManager {
         if(UserInputManager.isFileNotNull() && filePath.contains("XML")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 bufferedReader.readLine();
+                int idCounter = 0;
 
                 while((line = bufferedReader.readLine()) != null){
                     Matcher matcher = pattern.matcher(line);
-                    int idCounter = Math.abs(line.hashCode());
+                    idCounter += Math.abs(line.hashCode() / 128);
                     if(matcher.find()){
                         String attribute = matcher.group().trim();
                         infoDragon.add(attribute.substring(attribute.indexOf(">") + 1, attribute.lastIndexOf("<")));

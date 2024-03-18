@@ -270,8 +270,10 @@ public class UserInputManager {
     public static boolean isDragonTypeValid(String inputType){
         boolean exist = true;
         try{
-            if(!inputType.isEmpty() && !inputType.equals("null")){
-                DragonType.valueOf(inputType);
+            if(inputType != null){
+                if(!inputType.isEmpty() && !inputType.equals("null")){
+                    DragonType.valueOf(inputType);
+                }
             }
         }catch(IllegalArgumentException exception){
             System.out.println("----------------------");

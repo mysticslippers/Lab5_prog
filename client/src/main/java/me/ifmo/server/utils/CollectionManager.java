@@ -136,7 +136,7 @@ public class CollectionManager{
      */
 
     public void loadCollectionFromFile(){
-        this.collection = FileManager.readFileCSVByPattern(System.getenv("1CSV"));
+        this.collection = FileManager.readFileCSVByCSVFormat(System.getenv("1CSV"));
         this.timeOfInitialization = LocalDateTime.now();
         sortByCave();
     }
@@ -186,7 +186,7 @@ public class CollectionManager{
      */
 
     public void saveCollectionToFile(){
-        FileManager.writeFileXMLBySTaX(this.collection, System.getenv("2XML"));
+        FileManager.writeFileCSVByPattern(this.collection, System.getenv("1CSV"));
         this.timeOfConservation = LocalDateTime.now();
     }
 
