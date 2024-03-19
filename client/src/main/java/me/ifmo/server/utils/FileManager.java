@@ -54,7 +54,7 @@ public class FileManager {
         Pattern pattern = Pattern.compile("\\b([0-9а-яА-Яa-zA-Z-;,\\\\!.:_]+)\\b,");
         String line;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("CSV")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("CSV")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 bufferedReader.readLine();
 
@@ -125,7 +125,7 @@ public class FileManager {
                 .build();
 
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("CSV")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("CSV")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 CSVParser csvParser = new CSVParser(bufferedReader, csvFormat);
 
@@ -184,7 +184,7 @@ public class FileManager {
         Pattern patternAttribute = Pattern.compile("-\\s[0-9а-яА-Яa-zA-Z-;\\\\!.:_]*");
         String line;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("CSV")) {
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("CSV")) {
             try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))) {
 
                 for (TableDataHeaders header : TableDataHeaders.values()) {
@@ -236,7 +236,7 @@ public class FileManager {
         Pattern pattern = Pattern.compile("<.*?>(.*)<.*?>");
         String line;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("XML")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("XML")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 bufferedReader.readLine();
                 int idCounter = 0;
@@ -292,7 +292,7 @@ public class FileManager {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         Document document;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("XML")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("XML")){
             try{
                 document = documentBuilderFactory.newDocumentBuilder().parse(new File(filePath));
                 Node rootTagCollection = document.getFirstChild();
@@ -362,7 +362,7 @@ public class FileManager {
      */
 
     public static void writeFileXMLBySTaX(LinkedHashSet<? extends Dragon> collection, String filePath){
-        if(UserInputManager.isFileNotNull() && filePath.contains("XML")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("XML")){
             try(ByteArrayOutputStream os = new ByteArrayOutputStream();
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
                 writeXML(os, collection);
@@ -474,7 +474,7 @@ public class FileManager {
         Pattern pattern = Pattern.compile("\".*\": \"?([-0-9a-zA-Z]*)[^{\\[]\"?\\b");
         String line;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("JSON")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 Color color;
                 DragonType type;
@@ -532,7 +532,7 @@ public class FileManager {
         DragonType type;
         DragonCharacter character;
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("JSON")){
             try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
                 JSONArray dragonList = (JSONArray) jsonParser.parse(bufferedReader);
                 for(Object rawDragon : dragonList){
@@ -612,7 +612,7 @@ public class FileManager {
             dragonList.add(dragonDetails);
         }
 
-        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+        if(UserInputManager.isFileNotNull(filePath) && filePath.contains("JSON")){
             try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
                 bufferedWriter.write(dragonList.toJSONString());
                 bufferedWriter.flush();

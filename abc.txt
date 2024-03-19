@@ -1,0 +1,9 @@
+show
+add
+k
+1 1
+12
+RED
+FIRE
+GOOD
+67

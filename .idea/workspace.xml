@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82e78b9e-e207-4620-adb8-a536d573f2dc" name="Changes" comment="done">
-      <change afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
+    <list default="true" id="82e78b9e-e207-4620-adb8-a536d573f2dc" name="Changes" comment="json done">
+      <change afterPath="$PROJECT_DIR$/abc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,24 +16,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/client/Lab5_prog.client.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/client/Lab5_prog.client.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/client/Lab5_prog.client.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/client/Lab5_prog.client.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollectionCSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CollectionCSV.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollectionJSON.json" beforeDir="false" afterPath="$PROJECT_DIR$/CollectionJSON.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollectionXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CollectionXML.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/client/ClientLaunchManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CollectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CollectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO_List.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO_List.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/DragonMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/common/utils/DragonMaker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/CommandManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/classes/java/main/me/ifmo/server/utils/FileManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientLaunchManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/client/ClientLaunchManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/utils/DragonMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/common/utils/DragonMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CollectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/me/ifmo/server/utils/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,30 +79,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Lab5_prog:client [:client:ClientApp.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ARKoli/IdeaProjects/Lab5_prog",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Client.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.Build Lab5_prog.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Lab5_prog:client [:client:ClientApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ARKoli/IdeaProjects/Lab5_prog&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="me.ifmo.client.ClientApp" />
       <module name="Lab5_prog.client.main" />
+      <option name="PROGRAM_PARAMETERS" value="CollectionCSV.csv" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,7 +135,8 @@
       <workItem from="1710758603864" duration="1904000" />
       <workItem from="1710763914987" duration="91000" />
       <workItem from="1710764411437" duration="3523000" />
-      <workItem from="1710837850662" duration="4963000" />
+      <workItem from="1710837850662" duration="7570000" />
+      <workItem from="1710849039547" duration="5247000" />
     </task>
     <task id="LOCAL-00001" summary="жсончик + остальная лаба">
       <created>1706705249164</created>
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710759699877</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="json done">
+      <option name="closed" value="true" />
+      <created>1710844603392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710844603393</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +200,10 @@
     <MESSAGE value="жсончик + остальная лаба" />
     <MESSAGE value="жсончик + execute_script" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="json done" />
+    <option name="LAST_COMMIT_MESSAGE" value="json done" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab5_prog$Client.ic" NAME="Client Coverage Results" MODIFIED="1710843973402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

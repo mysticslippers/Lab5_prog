@@ -1,5 +1,6 @@
 package me.ifmo.server.utils;
 
+import me.ifmo.common.command.CommandType;
 import me.ifmo.common.data.Dragon;
 import me.ifmo.common.exceptions.NoSuchCommandException;
 import me.ifmo.common.exceptions.ExecutingScriptException;
@@ -174,43 +175,68 @@ public class CommandManager{
 
     public void executeScriptCommand(String filePath){
         Path pathOfFile = Path.of(filePath);
-        String line;
+        String[] inputCommand;
+        String nameOfCommand, argumentOfCommand;
+        CommandType typeOfCommand;
+        Dragon dragon = null;
+        int idCounter = 0;
         try(Scanner scriptScanner = new Scanner(new File(pathOfFile.toString()))){
-            if(this.namesOfScripts.contains(pathOfFile.getFileName().toString())) throw new ExecutingScriptException();
-            this.namesOfScripts.add(pathOfFile.getFileName().toString());
-            DragonMaker.setConsoleScanner(scriptScanner);
+            String fileName = pathOfFile.getFileName().toString();
+            if(this.namesOfScripts.contains(fileName)) throw new ExecutingScriptException();
+            this.namesOfScripts.add(fileName);
             DragonMaker.setConsoleMode(false);
-            while((line = scriptScanner.nextLine()) != null){
-                String[] inputCommand = UserInputManager.tokenizeArguments(scriptScanner);
-                String nameOfCommand = inputCommand[0];
-                String argumentOfCommand = inputCommand[1];
-                if (!getCommands().containsKey(nameOfCommand)) throw new NoSuchCommandException();
-                Dragon dragon;
-                switch(nameOfCommand){
-                    case "update_by_id" -> dragon = DragonMaker.updateDragon();
-                    case "add", "add_if_max" -> dragon = DragonMaker.getDragon(line.hashCode());
-                    default -> dragon = null;
-                }
-                if (getCommands().get(nameOfCommand).hasValidArgument(argumentOfCommand, dragon)) {
-                    addToHistoryOfCommands(nameOfCommand + "\n");
-                    switch (nameOfCommand) {
-                        case "help" -> helpCommand();
-                        case "history" -> historyOfCommands();
-                        case "execute_script" -> executeScriptCommand(argumentOfCommand);
-                        default -> getCommands().get(nameOfCommand).execute();
+            DragonMaker.setConsoleScanner(scriptScanner);
+
+            while(scriptScanner.hasNextLine()) {
+                try {
+                    inputCommand = UserInputManager.tokenizeArguments(scriptScanner);
+                    nameOfCommand = inputCommand[0];
+                    argumentOfCommand = inputCommand[1];
+                    typeOfCommand = UserInputManager.isInputCommandValid(nameOfCommand, argumentOfCommand);
+
+                    if (typeOfCommand == CommandType.NOT_VALID) throw new NoSuchCommandException();
+                    Command userCommand = getCommands().get(nameOfCommand);
+                    switch (typeOfCommand) {
+                        case VALID -> {
+                            if (userCommand.hasValidArgument(argumentOfCommand, dragon)) {
+                                switch (nameOfCommand) {
+                                    case "help" -> {
+                                        userCommand.execute();
+                                        helpCommand();
+                                    }
+                                    case "history" -> {
+                                        userCommand.execute();
+                                        historyOfCommands();
+                                    }
+                                    default -> userCommand.execute();
+                                }
+                            }
+                        }
+                        case TRANSMITTING -> {
+                            idCounter += nameOfCommand.hashCode() / 12;
+                            dragon = (nameOfCommand.contains("add")) ? DragonMaker.getDragon(idCounter) : DragonMaker.updateDragon();
+                            if (userCommand.hasValidArgument(argumentOfCommand, dragon)) {
+                                userCommand.execute();
+                            }
+                        }
+                        case SCRIPT -> {
+                            userCommand.execute();
+                            executeScriptCommand(argumentOfCommand);
+                        }
                     }
+                    addToHistoryOfCommands(nameOfCommand);
+                    saveHistoryOfCommands();
+                }catch(NoSuchCommandException exception){
+                    System.out.println("----------------------");
+                    System.out.println("There is no such command!");
                 }
             }
-            saveHistoryOfCommands();
         }catch(ExecutingScriptException exception){
             System.out.println("----------------------");
             System.out.println("The file with the script has already been executed before!");
         }catch(IOException exception){
             System.out.println("----------------------");
             System.out.println("The file cannot be read or is missing!");
-        }catch(NoSuchCommandException exception){
-            System.out.println("----------------------");
-            System.out.println("There is no such command!");
         }catch(NoSuchElementException exception){
             System.out.println("----------------------");
             System.out.println("Script file is empty!");

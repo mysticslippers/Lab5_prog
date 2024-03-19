@@ -9,6 +9,7 @@ import me.ifmo.common.exceptions.LocalDateParseException;
 import me.ifmo.common.exceptions.NumberOutOfRangeException;
 import me.ifmo.common.exceptions.StringContainCsvDelimiterException;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -341,10 +342,10 @@ public class UserInputManager {
      * @return Returns true if the path to the environment variable named CollectionXML and history is correct.
      */
 
-    public static boolean isFileNotNull(){
+    public static boolean isFileNotNull(String filePath){
         boolean exist = true;
         try{
-            if((System.getenv("1CSV") == null) && (System.getenv("2XML") == null) && (System.getenv("3JSON") == null)){
+            if(!new File(filePath).exists()){
                 System.out.println("----------------------");
                 System.out.println("Collection file not found!");
                 throw new FileNotFoundException();

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CollectionXML>
     <Dragon>
-        <id>1588970020</id>
+        <id>476402209</id>
         <name>q</name>
         <coordinates>
             <coordinateX>4</coordinateX>
             <coordinateY>4.0</coordinateY>
         </coordinates>
-        <localDate>2024-03-18</localDate>
+        <localDate>2024-03-19</localDate>
         <age>123</age>
         <color>RED</color>
         <type>FIRE</type>
@@ -17,13 +17,13 @@
         </cave>
     </Dragon>
     <Dragon>
-        <id>405662939</id>
+        <id>1982791261</id>
         <name>w</name>
         <coordinates>
             <coordinateX>0</coordinateX>
             <coordinateY>0.0</coordinateY>
         </coordinates>
-        <localDate>2024-03-18</localDate>
+        <localDate>2024-03-19</localDate>
         <age>5</age>
         <color>BLACK</color>
         <type>null</type>
@@ -33,13 +33,13 @@
         </cave>
     </Dragon>
     <Dragon>
-        <id>8034</id>
+        <id>1101288798</id>
         <name>pasha</name>
         <coordinates>
             <coordinateX>28</coordinateX>
             <coordinateY>28.0</coordinateY>
         </coordinates>
-        <localDate>2024-03-18</localDate>
+        <localDate>2024-03-19</localDate>
         <age>98</age>
         <color>RED</color>
         <type>FIRE</type>
@@ -49,13 +49,13 @@
         </cave>
     </Dragon>
     <Dragon>
-        <id>1130478920</id>
+        <id>971848845</id>
         <name>dima</name>
         <coordinates>
             <coordinateX>5</coordinateX>
             <coordinateY>5.0</coordinateY>
         </coordinates>
-        <localDate>2024-03-18</localDate>
+        <localDate>2024-03-19</localDate>
         <age>34</age>
         <color>RED</color>
         <type>AIR</type>

@@ -134,7 +134,7 @@ public class DragonMaker{
                 info = getConsoleScanner().nextLine().trim();
                 scriptDataValid.add(UserInputManager.isDragonTypeValid(info));
             }
-            if(info.equals("")) info = null;
+            if(info.isEmpty()) info = null;
             dragonInfo.add(info);
 
             if(isConsoleMode()){
@@ -145,7 +145,7 @@ public class DragonMaker{
                     System.out.println(info);
                 } while (!UserInputManager.isDragonCharacterValid(info));
                 System.out.println("----------------------");
-                System.out.println("Excellent! Let's give it cave:");
+                System.out.println("Excellent! Let's give it number of treasures:");
             }else{
                 info = getConsoleScanner().nextLine().trim();
                 scriptDataValid.add(UserInputManager.isDragonCharacterValid(info));

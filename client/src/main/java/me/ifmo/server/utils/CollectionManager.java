@@ -2,7 +2,9 @@ package me.ifmo.server.utils;
 
 import me.ifmo.common.data.Dragon;
 import me.ifmo.common.data.DragonCharacter;
-import me.ifmo.common.interfaces.*;
+import me.ifmo.common.interfaces.AddIFMax;
+import me.ifmo.common.interfaces.AverageOfAge;
+import me.ifmo.common.interfaces.RemoveAllByCharacter;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
@@ -14,6 +16,7 @@ import java.util.stream.Collectors;
 
 public class CollectionManager{
     private LinkedHashSet<Dragon> collection;
+    private String filePath;
     private LocalDateTime timeOfInitialization;
     private LocalDateTime timeOfConservation;
     private static long avgAge = 0;
@@ -36,6 +39,15 @@ public class CollectionManager{
 
     public LinkedHashSet<Dragon> getCollection(){
         return this.collection;
+    }
+
+    /**
+     * Method to access our file path with collection.
+     * @return Returns file path with collection.
+     */
+
+    public String getFilePath() {
+        return this.filePath;
     }
 
     /**
@@ -135,8 +147,14 @@ public class CollectionManager{
      * Method for initializing a collection (loading data from a file into a collection).
      */
 
-    public void loadCollectionFromFile(){
-        this.collection = FileManager.readFileJSONByLibrary(System.getenv("3JSON"));
+    public void loadCollectionFromFile(String filepath){
+        String fileExtension = filepath.substring(filepath.lastIndexOf(".") + 1);
+        switch (fileExtension){
+            case "csv" -> this.collection = FileManager.readFileCSVByPattern(filepath);
+            case "xml" -> this.collection = FileManager.readFileXMLByDOM(filepath);
+            case "json" -> this.collection = FileManager.readFileJSONByLibrary(filepath);
+        }
+        this.filePath = filepath;
         this.timeOfInitialization = LocalDateTime.now();
         sortByCave();
     }
@@ -186,7 +204,12 @@ public class CollectionManager{
      */
 
     public void saveCollectionToFile(){
-        FileManager.writeFileJSONByLibrary(this.collection, System.getenv("3JSON"));
+        String fileExtension = getFilePath().substring(getFilePath().lastIndexOf(".") + 1);
+        switch (fileExtension){
+            case "csv" -> FileManager.writeFileCSVByPattern(getCollection(), getFilePath());
+            case "xml" -> FileManager.writeFileXMLBySTaX(getCollection(), getFilePath());
+            case "json" -> FileManager.writeFileJSONByLibrary(getCollection(), getFilePath());
+        }
         this.timeOfConservation = LocalDateTime.now();
     }
 

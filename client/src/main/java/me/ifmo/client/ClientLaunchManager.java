@@ -9,13 +9,15 @@ import me.ifmo.server.utils.CollectionManager;
 import me.ifmo.server.utils.CommandManager;
 import me.ifmo.server.utils.commands.*;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.LinkedHashSet;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class ClientLaunchManager {
     private Scanner userScanner = new Scanner(System.in);
+    private String filePath;
 
     /**
      * Method for setting a user scanner.
@@ -26,6 +28,10 @@ public class ClientLaunchManager {
         this.userScanner = userScanner;
     }
 
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
     /**
      * Method for getting a user scanner.
      * @return Returns user scanner.
@@ -33,6 +39,10 @@ public class ClientLaunchManager {
 
     public Scanner getUserScanner() {
         return this.userScanner;
+    }
+
+    private String getFilePath(){
+        return this.filePath;
     }
 
     public void launch(){
@@ -45,7 +55,10 @@ public class ClientLaunchManager {
                 new RemoveByIdCommand(collectionManager), new ReorderCommand(collectionManager),
                 new SaveCommand(collectionManager), new ShowCommand(collectionManager), new UpdateByIdCommand(collectionManager));
 
-        collectionManager.loadCollectionFromFile();
+        Path path = Paths.get(getFilePath()).toAbsolutePath();
+        setFilePath(path.toString());
+        collectionManager.loadCollectionFromFile(getFilePath());
+
         String nameOfCommand = "";
         long tmpCounter = 0;
         do{
