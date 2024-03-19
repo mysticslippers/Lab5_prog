@@ -76,13 +76,13 @@ public class ClientLaunchManager {
                                     inputCommand.execute();
                                     commandManager.historyOfCommands();
                                 }
-                                case "execute_script" -> {
-                                    inputCommand.execute();
-                                    commandManager.executeScriptCommand(argumentOfCommand);
-                                }
                                 default -> inputCommand.execute();
                             }
                         }
+                    }
+                    case SCRIPT -> {
+                        inputCommand.execute();
+                        commandManager.executeScriptCommand(argumentOfCommand);
                     }
                     case TRANSMITTING -> {
                         tmpCounter += nameOfCommand.hashCode() / 12;
@@ -93,6 +93,7 @@ public class ClientLaunchManager {
                     }
                 }
                 commandManager.addToHistoryOfCommands(nameOfCommand);
+                commandManager.saveHistoryOfCommands();
             }catch(NoSuchCommandException exception){
                 System.out.println("----------------------");
                 System.out.println("There is no such command! \nEnter the help command for a complete list of commands.");

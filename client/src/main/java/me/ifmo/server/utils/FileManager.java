@@ -6,6 +6,10 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.csv.DuplicateHeaderMode;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -459,7 +463,7 @@ public class FileManager {
     }
 
     /**
-     * A method that implements writing collection objects by Pattern to JSON file.
+     * A method that implements reading data from a JSON file using a Pattern into a collection and checking it for validity. Works only with a beauty JSON file.
      * @param filePath - The path to the file.
      * @return Returns a collection of objects from a file.
      */
@@ -514,10 +518,108 @@ public class FileManager {
         return collection;
     }
 
+    /**
+     * A method that implements reading data from a JSON file using a json-simple into a collection and checking it for validity.
+     * @param filePath - The path to the file.
+     * @return Returns a collection of objects from a file.
+     */
+
     public static LinkedHashSet<Dragon> readFileJSONByLibrary(String filePath){
         LinkedHashSet<Dragon> collection = new LinkedHashSet<>();
+        ArrayList<String> infoDragon = new ArrayList<>();
+        JSONParser jsonParser = new JSONParser();
+        Color color;
+        DragonType type;
+        DragonCharacter character;
+
+        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+            try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
+                JSONArray dragonList = (JSONArray) jsonParser.parse(bufferedReader);
+                for(Object rawDragon : dragonList){
+                    int idCounter = Math.abs(rawDragon.hashCode());
+
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("id"));
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("name"));
+
+                    JSONObject dragonCoordinates = (JSONObject) ((JSONObject) rawDragon).get("coordinates");
+
+                    infoDragon.add((String) dragonCoordinates.get("coordinateX"));
+                    infoDragon.add((String) dragonCoordinates.get("coordinateY"));
+
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("localDate"));
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("age"));
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("color"));
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("type"));
+                    infoDragon.add((String) ((JSONObject) rawDragon).get("character"));
+
+                    JSONObject dragonCave = (JSONObject)  ((JSONObject) rawDragon).get("cave");
+                    infoDragon.add((String) dragonCave.get("numberOfTreasures"));
+
+                    if(UserInputManager.isDragonDataValid(infoDragon)){
+                        color = Color.valueOf(infoDragon.get(6));
+                        type = (!infoDragon.get(7).isEmpty() && !infoDragon.get(7).equals("null")) ? DragonType.valueOf(infoDragon.get(7)) : null;
+                        character = DragonCharacter.valueOf(infoDragon.get(8));
+                        System.out.println("Object with ID: " + infoDragon.get(0) + " added to the collection!");
+                        System.out.println("Object's ID now is " + (idCounter));
+                        collection.add(new Dragon(idCounter, infoDragon.get(1), new Coordinates(Long.parseLong(infoDragon.get(2)), Float.parseFloat(infoDragon.get(3))),
+                                LocalDate.now(), Long.parseLong(infoDragon.get(5)), color, type, character, new DragonCave(Long.parseLong(infoDragon.get(9)))));
+
+                    } else {
+                        System.out.println("Object data ID: " + infoDragon.get(0) + " is not valid!");
+                        System.out.println(infoDragon);
+                    }
+                    infoDragon.clear();
+                }
+            } catch(IOException exception){
+                System.out.println("----------------------");
+                System.out.println("The file can't be read!");
+            } catch(NoSuchElementException | ParseException exception){
+                System.out.println("----------------------");
+                System.out.println("The file is empty!");
+            }
+        }
         return collection;
     }
 
-    public static void writeFileJSONByLibrary(LinkedHashSet<Dragon> collection, String filePath){}
+    /**
+     * A method that implements writing collection objects by json-simple to JSON file.
+     * @param collection - Original collection.
+     * @param filePath - The path to the file.
+     */
+
+    @SuppressWarnings("unchecked")
+    public static void writeFileJSONByLibrary(LinkedHashSet<Dragon> collection, String filePath){
+        JSONArray dragonList = new JSONArray();
+
+        for(Dragon dragon : collection){
+            JSONObject dragonDetails = new JSONObject();
+            JSONObject dragonCave = new JSONObject();
+            JSONObject dragonCoordinates = new JSONObject();
+
+            dragonDetails.put("id", String.valueOf(dragon.getId()));
+            dragonDetails.put("name", dragon.getName());
+            dragonCoordinates.put("coordinateX", String.valueOf(dragon.getCoordinates().getX()));
+            dragonCoordinates.put("coordinateY", String.valueOf(dragon.getCoordinates().getY()));
+            dragonDetails.put("coordinates", dragonCoordinates);
+            dragonDetails.put("localDate", String.valueOf(dragon.getCreationDate()));
+            dragonDetails.put("age", String.valueOf(dragon.getAge()));
+            dragonDetails.put("color", String.valueOf(dragon.getColor()));
+            dragonDetails.put("type", String.valueOf(dragon.getType()));
+            dragonDetails.put("character", String.valueOf(dragon.getCharacter()));
+            dragonCave.put("numberOfTreasures", String.valueOf(dragon.getCave().getNumberOfTreasures()));
+            dragonDetails.put("cave", dragonCave);
+
+            dragonList.add(dragonDetails);
+        }
+
+        if(UserInputManager.isFileNotNull() && filePath.contains("JSON")){
+            try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))){
+                bufferedWriter.write(dragonList.toJSONString());
+                bufferedWriter.flush();
+            } catch(IOException exception){
+                System.out.println("----------------------");
+                System.out.println("File can't be written!");
+            }
+        }
+    }
 }

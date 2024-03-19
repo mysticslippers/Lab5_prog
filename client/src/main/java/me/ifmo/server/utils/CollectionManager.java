@@ -136,7 +136,7 @@ public class CollectionManager{
      */
 
     public void loadCollectionFromFile(){
-        this.collection = FileManager.readFileCSVByCSVFormat(System.getenv("1CSV"));
+        this.collection = FileManager.readFileJSONByLibrary(System.getenv("3JSON"));
         this.timeOfInitialization = LocalDateTime.now();
         sortByCave();
     }
@@ -186,7 +186,7 @@ public class CollectionManager{
      */
 
     public void saveCollectionToFile(){
-        FileManager.writeFileCSVByPattern(this.collection, System.getenv("1CSV"));
+        FileManager.writeFileJSONByLibrary(this.collection, System.getenv("3JSON"));
         this.timeOfConservation = LocalDateTime.now();
     }
 

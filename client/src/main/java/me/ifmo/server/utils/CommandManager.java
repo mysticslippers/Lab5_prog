@@ -18,7 +18,7 @@ import java.util.*;
 public class CommandManager{
     private final Map<String, Command> commands = new HashMap<>();
     private final ArrayList<String> historyOfCommands = new ArrayList<>();
-    private final Stack<String> namesOfScripts = new Stack<>();
+    private final ArrayList<String> namesOfScripts = new ArrayList<>();
     private final Command addCommand;
     private final Command addIfMaxCommand;
     private final Command averageOfAgeCommand;
@@ -136,7 +136,7 @@ public class CommandManager{
      */
 
     public void saveHistoryOfCommands(){
-        try(FileWriter fileWriter = new FileWriter(System.getenv("historyOfCommands"))){
+        try(FileWriter fileWriter = new FileWriter(System.getenv("history"))){
             for(String command : getHistoryOfCommands()){
                 fileWriter.write(command + "\n");
             }
@@ -174,12 +174,12 @@ public class CommandManager{
 
     public void executeScriptCommand(String filePath){
         Path pathOfFile = Path.of(filePath);
+        String line;
         try(Scanner scriptScanner = new Scanner(new File(pathOfFile.toString()))){
             if(this.namesOfScripts.contains(pathOfFile.getFileName().toString())) throw new ExecutingScriptException();
             this.namesOfScripts.add(pathOfFile.getFileName().toString());
             DragonMaker.setConsoleScanner(scriptScanner);
             DragonMaker.setConsoleMode(false);
-            String line;
             while((line = scriptScanner.nextLine()) != null){
                 String[] inputCommand = UserInputManager.tokenizeArguments(scriptScanner);
                 String nameOfCommand = inputCommand[0];

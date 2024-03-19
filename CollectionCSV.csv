@@ -1,4 +1,5 @@
 id, name, coordinateX, coordinateY, localDate, age, color, type, character, numberOfTreasures
- 997608398,  q,  4,  4.0,  2024-02-01,  123,  RED,  FIRE,  GOOD,  123
- 1973538135,  w,  0,  0.0,  2024-02-01,  5,  BLACK,  null,  WISE,  6
- 1865127310,  dima,  5,  5.0,  2024-02-01,  34,  RED,  AIR,  EVIL,  5
+ 2108649164,  q,  4,  4.0,  2024-03-18,  123,  RED,  FIRE,  GOOD,  123
+ 8034,  pasha,  7,  7.0,  2024-03-18,  123,  BLACK,  AIR,  WISE,  9
+ 340870931,  w,  0,  0.0,  2024-03-18,  5,  BLACK,  null,  WISE,  6
+ 1530388690,  dima,  5,  5.0,  2024-03-18,  34,  RED,  AIR,  EVIL,  5
